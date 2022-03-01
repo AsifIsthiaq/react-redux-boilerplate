@@ -1,6 +1,13 @@
 {
   "name": "react-redux-boilerplate",
   "version": "0.1.0",
+  "author": "Asif Isthiaq",
+  "contributors": [
+    {
+      "name": "Asif Isthiaq",
+      "email": "asifisthiaq@gmail.com"
+    }
+  ],
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",

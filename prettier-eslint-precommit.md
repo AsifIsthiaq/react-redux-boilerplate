@@ -35,6 +35,7 @@ Setting up Prettier and ESLint with pre-commit hook
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write",
+      "eslint --fix",
       "git add"
     ],
     "*.{html,css,less,ejs}": [

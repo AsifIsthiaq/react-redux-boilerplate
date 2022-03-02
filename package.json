@@ -27,11 +27,11 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "PORT=3000 env-cmd -f ./environments/.env.dev react-scripts start",
-    "stag": "PORT=3000 env-cmd -f ./environments/.env.stag react-scripts start",
+    "stage": "PORT=3000 env-cmd -f ./environments/.env.stage react-scripts start",
     "prod": "PORT=3000 env-cmd -f ./environments/.env.prod react-scripts start",
     "build": "react-scripts build",
     "build-dev": "env-cmd -f ./environments/.env.dev react-scripts build",
-    "build-stag": "env-cmd -f ./environments/.env.stag react-scripts build",
+    "build-stage": "env-cmd -f ./environments/.env.stage react-scripts build",
     "build-prod": "env-cmd -f ./environments/.env.prod react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

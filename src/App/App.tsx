@@ -1,8 +1,9 @@
-import React from 'react';
-import logo from '../logo.svg';
-import './App.scss';
+import React from "react";
+import logo from "../logo.svg";
+import "./App.scss";
 
 function App() {
+  console.log(`ENV: ${process.env.REACT_APP_ENV}`);
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +19,7 @@ function App() {
         >
           Learn React
         </a>
+        <h1>Asif Isthiaq</h1>
       </header>
     </div>
   );

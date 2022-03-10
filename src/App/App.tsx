@@ -6,6 +6,7 @@ import {
   Navigate,
 } from 'react-router-dom';
 import './App.scss';
+import PrivateRoute from '../components/PrivateRoute';
 import {
   LOCAL_DEMO_HOME_ENDPOINT,
   LOCAL_DEMO_COUNTER_ENDPOINT,
@@ -28,7 +29,11 @@ function App() {
             <Route path={LOCAL_DEMO_HOME_ENDPOINT} element={<HomePage />} />
             <Route
               path={LOCAL_DEMO_COUNTER_ENDPOINT}
-              element={<CounterPage />}
+              element={
+                <PrivateRoute>
+                  <CounterPage />
+                </PrivateRoute>
+              }
             />
             <Route
               path={LOCAL_LOGIN_ENDPOINT}

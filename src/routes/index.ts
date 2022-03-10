@@ -1,39 +1,24 @@
-// import { Home, Login, ProductDetails, ProductList } from "../views/pages";
-// import { withAuthentication, lazyLoad } from "../views/enhancers";
+import { lazy } from 'react';
+// import { HomePage, CounterPage } from '../components/demoFeature';
+import {
+  LOCAL_DEMO_HOME_ENDPOINT,
+  LOCAL_DEMO_COUNTER_ENDPOINT,
+} from '../configs/endpoints';
+
+const HomePage = lazy(() => import('../components/demoFeature/HomePage'));
+const CounterPage = lazy(() => import('../components/demoFeature/CounterPage'));
 
 const routes = [
-  2,
-  // {
-  //     path: "/",
-  //     component: Home,
-  //     exact: true,
-  // },
-  // {
-  //     path: "/products",
-  //     component: ProductList,
-  //     exact: true,
-  // },
-  // {
-  //     path: "/products/:permalink",
-  //     example: "/products/apple",
-  //     component: ProductDetails,
-  //     exact: true,
-  // },
-  // {
-  //     path: "/cart",
-  //     component: lazyLoad( ( ) => import( "../views/pages/cart" ) ),
-  //     exact: true,
-  // },
-  // {
-  //     path: "/myaccount",
-  //     component: withAuthentication( lazyLoad( ( ) => import( "../views/pages/myAccount" ) ) ),
-  //     exact: true,
-  // },
-  // {
-  //     path: "/login",
-  //     component: Login,
-  //     exact: true,
-  // },
+  {
+    path: LOCAL_DEMO_HOME_ENDPOINT,
+    component: HomePage,
+    exact: true,
+  },
+  {
+    path: LOCAL_DEMO_COUNTER_ENDPOINT,
+    component: CounterPage,
+    exact: true,
+  },
 ];
 
 export default routes;

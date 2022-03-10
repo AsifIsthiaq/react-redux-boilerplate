@@ -10,6 +10,7 @@ import {
   LOCAL_DEMO_HOME_ENDPOINT,
   LOCAL_DEMO_COUNTER_ENDPOINT,
   LOCAL_ERROR_ENDPOINT,
+  LOCAL_LOGIN_ENDPOINT,
 } from '../configs/endpoints';
 
 // import {HomePage,CounterPage} from '../components/demoFeature'
@@ -28,6 +29,10 @@ function App() {
             <Route
               path={LOCAL_DEMO_COUNTER_ENDPOINT}
               element={<CounterPage />}
+            />
+            <Route
+              path={LOCAL_LOGIN_ENDPOINT}
+              element={<div>Log In Page</div>}
             />
             <Route
               path={LOCAL_ERROR_ENDPOINT}

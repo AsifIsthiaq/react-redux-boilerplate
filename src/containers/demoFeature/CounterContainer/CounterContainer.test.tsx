@@ -3,7 +3,7 @@ import React from 'react';
 import CounterContainer, { CounterContainerProps } from './CounterContainer';
 
 describe('CounterContainer', () => {
-  const defaultProps: CounterContainerProps = { step: 0 };
+  const defaultProps: CounterContainerProps = { steps: 0 };
 
   it('should render', () => {
     const props = { ...defaultProps };

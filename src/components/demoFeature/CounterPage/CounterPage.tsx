@@ -2,8 +2,8 @@ import React from 'react';
 import CounterContainer from '../../../containers/demoFeature/CounterContainer';
 
 function CounterPage() {
-  const step = Number(process.env.REACT_APP_STEP) || 1;
-  return <CounterContainer step={step} />;
+  const steps = Number(process.env.REACT_APP_STEPS) || 1;
+  return <CounterContainer steps={steps} />;
 }
 
 export default CounterPage;

@@ -5,11 +5,11 @@ export interface UpdateCounterFunc {
 export interface CounterProps {
   count: number;
   steps: number;
-  onIncrement: UpdateCounterFunc;
+  onIncrement: () => void;
   onDecrement: UpdateCounterFunc;
 }
 
-function Counter(props: CounterProps) {
+const Counter: React.FC<CounterProps> = (props: CounterProps) => {
   const { count, steps, onIncrement, onDecrement } = props;
   return (
     <React.Fragment>
@@ -19,6 +19,6 @@ function Counter(props: CounterProps) {
       <div>Current increment steps: {steps}</div>
     </React.Fragment>
   );
-}
+};
 
 export default Counter;

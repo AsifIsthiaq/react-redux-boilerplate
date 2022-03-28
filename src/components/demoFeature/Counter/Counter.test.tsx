@@ -6,8 +6,9 @@ describe('Counter', () => {
   const defaultProps: CounterProps = {
     count: 0,
     steps: 0,
-    onIncrement: () => 0,
-    onDecrement: () => 0,
+    onIncrement: () => null,
+    onDecrement: () => null,
+    onReset: () => null,
   };
 
   it('should render', () => {

@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Counter from '../../../components/demoFeature/Counter';
-import { getCount, setCounter } from '../../../store/ducks/counter';
+import {
+  getCount,
+  setCounter,
+  resetCounter,
+} from '../../../store/ducks/counter';
 
 export interface CounterContainerProps {
   steps: number;
@@ -19,8 +23,12 @@ const CounterContainer: React.FC<CounterContainerProps> = (
     dispatch(setCounter(count + props.steps));
   };
 
-  const onDecrement = () => {
+  const onDecrement = (): void => {
     if (count !== 0) dispatch(setCounter(count - props.steps));
+  };
+
+  const onReset = (): void => {
+    dispatch(resetCounter());
   };
 
   // const onDecrement = () => {
@@ -33,6 +41,7 @@ const CounterContainer: React.FC<CounterContainerProps> = (
       steps={props.steps}
       onIncrement={onIncrement}
       onDecrement={onDecrement}
+      onReset={onReset}
     />
   );
 };

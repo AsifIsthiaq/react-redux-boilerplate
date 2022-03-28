@@ -44,7 +44,7 @@ export const setCounter = (count: number): SetCounterAction => ({
 /** reset counter action creator
  * @returns {ResetCounterAction} - an action to reset counter in store
  */
-export const resetSession = (): ResetCounterAction => ({
+export const resetCounter = (): ResetCounterAction => ({
   type: RESET_COUNTER,
 });
 

@@ -71,10 +71,17 @@ export default function reducer(
 ): ImmutableListTableState {
   switch (action.type) {
     case SET_COUNTER:
-      return SeamlessImmutable({
-        ...state.asMutable({ deep: true }),
-        count: action.count,
-      });
+      // return SeamlessImmutable({
+      //   ...state.asMutable({ deep: true }),
+      //   count: action.count,
+      // });
+      return action.count <= 20
+        ? SeamlessImmutable({
+            ...state.asMutable({ deep: true }),
+            count: action.count,
+          })
+        : state;
+    // return { ...state, count: action.count };
     case RESET_COUNTER:
       return initialState;
     default:

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Counter from '../../../components/demoFeature/Counter';
 import {
@@ -35,6 +35,7 @@ const CounterContainer: React.FC<CounterContainerProps> = (
   //   if (count !== 0) setCount(prevCount => prevCount - props.steps);
   // };
 
+  console.log('CounterContainer render');
   return (
     <Counter
       count={count}

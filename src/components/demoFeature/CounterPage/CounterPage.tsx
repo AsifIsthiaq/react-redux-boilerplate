@@ -15,7 +15,7 @@ function CounterPage() {
         console.log('github response ', res);
       })
       .catch((error: Error) => console.error(error));
-  });
+  }, []);
   const steps = Number(process.env.REACT_APP_STEPS) || 1;
   return <CounterContainer steps={steps} />;
 }
